@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content fade-in">
+        <h1>AURELIA</h1>
+        <p>The intersection of minimalist design and uncompromising luxury. Discover the new editorial collection.</p>
+        <a href="#storefront" class="btn btn-gold" style="margin-top: 20px;">Explore the Storefront</a>
+    </div>
+</section>
+
+<!-- Storefront Section -->
+<section id="storefront" class="container">
+    <h2 class="section-title fade-in">The Storefront</h2>
+    
+    <!-- Products will be injected here by script.js -->
+    <div class="product-grid" id="shop-grid">
+    </div>
+</section>
+{% endblock %}

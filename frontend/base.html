@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | AURELIA</title>
+    <meta name="description" content="AURELIA Luxury Fashion. Minimalist, editorial, and sustainable.">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<!-- Add class home-page if on index to toggle header text color correctly before scroll -->
+<body class="{% if title == 'Home' %}home-page{% endif %}">
+    
+    <!-- Glassmorphism Header -->
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">AURELIA</a>
+            <nav class="nav-links">
+                <a href="/">Storefront</a>
+                <a href="/about">Brand Story</a>
+                <a href="/contact">Inquiry</a>
+                <div class="cart-icon" id="cart-icon">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+            </nav>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <span class="close-cart" id="close-cart">✕</span>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items injected by script.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <a href="/checkout" class="btn btn-gold" style="width: 100%; text-align: center;">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content fade-in">
+            <div class="footer-col">
+                <a href="/" class="logo" style="color: var(--color-white); font-size: 1.5rem; letter-spacing: 2px;">AURELIA</a>
+                <p style="margin-top: 20px; color: rgba(255, 255, 255, 0.7); max-width: 300px;">Redefining high-end fashion through minimalist editorial design and sustainable luxury.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Discover</h4>
+                <ul>
+                    <li><a href="/">The Collection</a></li>
+                    <li><a href="/about">Our Story</a></li>
+                    <li><a href="/contact">Client Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom fade-in">
+            <p>&copy; 2026 AURELIA Luxury Fashion. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Concierge UI -->
+    <div id="chat-bubble" class="chat-bubble">✧</div>
+    
+    <div id="chat-window" class="chat-window">
+        <div class="chat-header">
+            <span>AURELIA Concierge</span>
+            <span id="close-chat" style="cursor: pointer; color: var(--color-gold);">✕</span>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="msg bot">Welcome to AURELIA. I am your personal concierge. How may I assist you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Inquire...">
+            <button id="chat-send-btn">➤</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="/static/script.js"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="fade-in">Client Inquiry</h1>
+    <p class="fade-in" style="transition-delay: 0.2s; margin-top: 20px; color: rgba(10,10,10,0.6);">Connect with our concierge.</p>
+</div>
+
+<div class="container" style="padding-top: 40px; margin-bottom: 120px;">
+    <section class="contact-grid fade-in">
+        <div class="contact-info">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; color: var(--color-gold);">Private Consultations</h2>
+            <p style="margin-bottom: 20px; font-weight: 300;">AURELIA offers bespoke tailoring and private viewing sessions for our elite clientele. Please submit your inquiry below to schedule an appointment with our master tailors.</p>
+            
+            <div style="margin-top: 40px;">
+                <h4 style="margin-bottom: 10px; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 1px;">Atelier</h4>
+                <p style="font-weight: 300; color: rgba(10,10,10,0.7);">15 Avenue Montaigne<br>75008 Paris, France</p>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h4 style="margin-bottom: 10px; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 1px;">Direct Line</h4>
+                <p style="font-weight: 300; color: rgba(10,10,10,0.7);">+33 1 40 70 80 90<br>concierge@aurelia.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form" style="background-color: #FAFAFA; padding: 50px;">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Inquiry Details</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Inquiry</button>
+                <div id="form-status" style="margin-top: 20px; font-size: 0.9rem;"></div>
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock %}

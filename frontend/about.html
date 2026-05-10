@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="fade-in">Brand Story</h1>
+    <p class="fade-in" style="transition-delay: 0.2s; margin-top: 20px; color: rgba(10,10,10,0.6);">The genesis of AURELIA.</p>
+</div>
+
+<div class="container" style="padding-top: 40px;">
+    <!-- Story Section -->
+    <section class="fade-in" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px;">
+        <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: var(--color-gold);">Editorial Excellence</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1rem; font-weight: 300;">AURELIA was born from a singular vision: to strip away the superfluous and elevate the essential. Our garments are not merely worn; they are experienced.</p>
+            <p style="font-size: 1.1rem; font-weight: 300;">Inspired by modernist architecture and editorial high fashion, we utilize exclusively premium materials—obsidian silks, champagne threads, and unadulterated cashmere—to construct pieces that transcend seasonality.</p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop" alt="AURELIA Atelier" style="width: 100%; height: auto; box-shadow: -20px 20px 0px rgba(197, 160, 89, 0.1);">
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="fade-in" style="background-color: var(--color-obsidian); color: var(--color-white); padding: 80px; text-align: center; margin-bottom: 120px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: var(--color-gold);">Sustainable Luxury</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,0.8);">Our commitment to the environment is as unwavering as our dedication to craft. AURELIA operates on a strict zero-waste protocol, ensuring that every thread serves a purpose and every garment respects the earth from which its materials were drawn.</p>
+    </section>
+</div>
+{% endblock %}
